@@ -38,7 +38,7 @@ O projeto Dashboard Climático foi desenvolvido utilizando as seguintes tecnolog
 🔹 Imagem
 
 <p align="center">
-  <a href="https://github.com/user-attachments/assets/ed185ea6-ca23-4dfa-a44f-1896f2aa2104">
+  <a>
     <img src="https://github.com/user-attachments/assets/45dd9905-2504-47c4-bd7f-73bd8204417f" width="250" height="150" alt="Tela Cadastro" style="margin-right: 10px;">
   </a>
 </p>
