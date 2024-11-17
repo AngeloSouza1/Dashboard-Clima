@@ -1,0 +1,27 @@
+app = 'dashboard-financeiro'
+primary_region = 'gru'
+
+[build]
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+auto_stop_machines = 'stop'
+  auto_start_machines = true
+  min_machines_running = 1  # Garante que ao menos uma máquina esteja rodando
+  processes = ['app']
+
+[[services]]
+  internal_port = 8080
+  protocol = "tcp"
+  [[services.ports]]
+    handlers = ["http"]
+    port = 80
+  [[services.http_checks]]
+    interval = 10000  # Verificação a cada 10 segundos
+    grace_period = "10s"  # Espera 10 segundos antes de falhar
+    method = "get"
+    path = "/"  # Endpoint válido
+    protocol = "http"
+    timeout = 2000
+    tls_skip_verify = false

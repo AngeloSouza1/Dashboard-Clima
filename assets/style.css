@@ -1,0 +1,117 @@
+/* Gradiente com Imagem de Fundo em Alta Resolução */
+body {
+    background: 
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.3)), /* Gradiente branco suave do topo */
+        linear-gradient(135deg, rgba(76, 175, 80, 0.3), rgba(46, 125, 50, 0.3)), /* Gradiente verde translúcido */
+        url('https://images.unsplash.com/photo-1530908295418-a12e326966ba?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=90&w=2560&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzF8fG1ldGVyZW9sb2dpYXxlbnwwfHwwfHx8MA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Montserrat', sans-serif;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-blend-mode: soft-light, overlay, overlay;
+}
+
+/* Estilos para o relógio e data */
+.time {
+    font-size: 3.8em;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 20px;
+    color: #333333;
+    text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.5);
+}
+
+.date {
+    font-size: 1.6em;
+    text-align: center;
+    color: #555555;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.5);
+}
+
+/* Seção de Condições Climáticas Atuais */
+.current-weather {
+    background-color: rgba(255, 255, 255, 0.725); /* Fundo claro e translúcido */
+    border-radius: 15px;
+    padding: 25px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    color: #333333;
+    margin: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.current-weather:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+}
+
+.current-weather .temperature {
+    font-size: 3.2em;
+    font-weight: bold;
+    color: #333333;
+}
+
+.current-weather .details {
+    font-size: 1.3em;
+    margin-top: 12px;
+    color: #555555;
+}
+
+/* Estilos para cartões de previsão diária */
+.forecast-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.forecast-card {
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo claro e translúcido */
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    margin: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    width: 85px;
+    color: #333333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.forecast-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.forecast-card h4 {
+    font-size: 1em;
+    margin-bottom: 6px;
+    color: #333333;
+}
+
+.forecast-card .icon {
+    font-size: 2.2em;
+    margin-bottom: 6px;
+    color: #555555;
+}
+
+.forecast-card .temp {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #333333;
+}
+
+/* Estilo do Ícone de Meteorologia */
+.fas.fa-cloud-sun {
+    font-size: 1.5em;
+    color: #ffa500; /* Cor do ícone, laranja para representar o sol */
+}
